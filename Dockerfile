@@ -10,11 +10,11 @@ RUN apt-get update && \
 	librsvg2-dev \
 	libqrencode-dev
 
-RUN curl http://ftp.gnome.org/pub/GNOME/sources/glabels/3.4/glabels-3.4.1.tar.xz \ 
-	-o glabels.xv && \
-	tar xvf glabels.xv
+RUN curl https://github.com/brozkeff/glabels/archive/refs/tags/glabels-3_4_1b_batchcollate.tar.gz \ 
+	-o glabels.tar.gz && \
+	tar xvf glabels.tar.gz
 
-WORKDIR /glabels-3.4.1/
+WORKDIR /glabels-glabels-3_4_1b_batchcollate/
 
 RUN ./configure && \
 	make && \
