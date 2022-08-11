@@ -8,10 +8,11 @@ RUN apt-get update && \
 	libxml2-utils \
 	libgtk-3-dev \
 	librsvg2-dev \
-	libqrencode-dev
+	libqrencode-dev \
+	wget
 
-RUN curl https://github.com/brozkeff/glabels/archive/refs/tags/glabels-3_4_1b_batchcollate.tar.gz \ 
-	-o glabels.tar.gz && \
+RUN wget https://github.com/brozkeff/glabels/archive/refs/tags/glabels-3_4_1b_batchcollate.tar.gz \ 
+	-O glabels.tar.gz && \
 	tar xvf glabels.tar.gz
 
 WORKDIR /glabels-glabels-3_4_1b_batchcollate/
