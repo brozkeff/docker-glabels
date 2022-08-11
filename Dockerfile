@@ -17,7 +17,9 @@ RUN wget https://github.com/brozkeff/glabels/archive/refs/tags/glabels-3_4_1b_ba
 
 WORKDIR /glabels-glabels-3_4_1b_batchcollate/
 
-RUN ./configure && \
+RUN aclocal && \
+	autoconf -i && \
+	./configure && \
 	make && \
 	make install && \
 	ldconfig
