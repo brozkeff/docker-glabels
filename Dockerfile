@@ -13,6 +13,8 @@ RUN apt-get update && \
 	gnome-common \
 	fonts-roboto \
 	tex-gyre
+    apt-get build-dep -y \
+        glabels
 
 RUN wget https://github.com/brozkeff/glabels/archive/refs/tags/glabels-3_4_1b_batchcollate.tar.gz \ 
 	-O glabels.tar.gz && \
