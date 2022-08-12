@@ -9,7 +9,8 @@ RUN apt-get update && \
 	libgtk-3-dev \
 	librsvg2-dev \
 	libqrencode-dev \
-	wget
+	wget \
+	gnome-common
 
 RUN wget https://github.com/brozkeff/glabels/archive/refs/tags/glabels-3_4_1b_batchcollate.tar.gz \ 
 	-O glabels.tar.gz && \
@@ -17,9 +18,7 @@ RUN wget https://github.com/brozkeff/glabels/archive/refs/tags/glabels-3_4_1b_ba
 
 WORKDIR /glabels-glabels-3_4_1b_batchcollate/
 
-RUN aclocal && \
-	autoconf -i && \
-	./configure && \
+RUN ./autogen.sh && \
 	make && \
 	make install && \
 	ldconfig
