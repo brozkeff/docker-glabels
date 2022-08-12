@@ -23,5 +23,5 @@ jobs:
         image: brozkeff/docker-glabels
         registry: docker.io
         dockerfile: Dockerfile
-        username: ${{ secrets.DOCKER_USERNAME }}
+        username: ${{ secrets.DOCKER_USER }}
         password: ${{ secrets.DOCKER_PASSWORD }}
