@@ -12,7 +12,7 @@ RUN apt-get update && \
 	wget \
 	gnome-common \
 	fonts-roboto \
-	tex-gyre
+	tex-gyre && \
     apt-get build-dep -y \
         glabels
 
