@@ -10,7 +10,9 @@ RUN apt-get update && \
 	librsvg2-dev \
 	libqrencode-dev \
 	wget \
-	gnome-common
+	gnome-common \
+	fonts-roboto \
+	tex-gyre
 
 RUN wget https://github.com/brozkeff/glabels/archive/refs/tags/glabels-3_4_1b_batchcollate.tar.gz \ 
 	-O glabels.tar.gz && \
