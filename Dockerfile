@@ -1,8 +1,7 @@
 FROM ubuntu:18.04
 
-RUN sudo cp /etc/apt/sources.list /etc/apt/sources.list~
-
-RUN sudo sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
+RUN sudo cp /etc/apt/sources.list /etc/apt/sources.list~ && \
+    sudo sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
 
 RUN apt-get update && \
     apt-get install -y \
